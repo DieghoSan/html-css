@@ -1,0 +1,23 @@
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    padding: 10px;
+
+}
+menu {
+    display: none;
+}
+article {
+    line-height: 1em;
+    min-width: 320px;
+    max-width: 700px;
+    margin: auto;
+    text-align: justify;  
+}
+p {
+    text-indent: 15px;
+}
+article::after {
+    content: 'Este sit foi produzido por Diegho San';
+}
