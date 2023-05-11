@@ -7,24 +7,50 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/tela.css" media="screen">
     <link rel="stylesheet" href="estilos/impressora.css" media="print">
+    <link rel="stylesheet" href="estilos/query.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Notícias</h1>
         <menu>
-            <ul>
+            <i class="bi bi-list" onclick="clickMenu()"></i>
+            <ul id="itens">
                 <li>Esportes</li>
                 <li>Política</li>
                 <li>Tecnologia</li>
+                <li>Jogos</li>
             </ul>
         </menu>
     </header>
-    <article>
-        <h2>Estou aprendendo a criar Media Queries</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur tenetur voluptates incidunt non, optio nostrum vel quos, ex, nihil aut corporis quas accusantium? Sint minus culpa facilis aut cupiditate quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore labore est quibusdam nesciunt laudantium modi optio omnis totam quod quaerat possimus sint nobis quasi voluptates, ipsum quia minima officiis.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium numquam voluptatem non expedita maiores magnam inventore minima nemo facilis perspiciatis explicabo accusamus quos, maxime quo repellat deleniti incidunt rem eos.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, eaque ducimus tempore rerum ut quasi corporis at! Pariatur, ad quasi alias ipsum sunt suscipit inventore explicabo laudantium necessitatibus. Ducimus, placeat?</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, iusto? Sint, fuga? Neque facilis tenetur, illo cumque nam sint sit ratione doloremque est, autem dignissimos! Eveniet reiciendis facere laudantium nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, distinctio aliquid quis commodi tempore ut ipsa. Ea impedit molestiae accusantium, explicabo veritatis obcaecati voluptates excepturi ipsum ipsa. Consequatur, ad dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis perferendis molestias ipsa atque quia ipsum distinctio ea iusto. Voluptates impedit magni voluptate non sunt, nihil exercitationem debitis quo voluptas obcaecati.</p>
-    </article>
+    <main>
+        <article>
+            <h2>Estou aprendendo a criar Media Queries</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur tenetur voluptates incidunt non, optio nostrum vel quos, ex, nihil aut corporis quas accusantium? Sint minus culpa facilis aut cupiditate quaerat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore labore est quibusdam nesciunt laudantium modi optio omnis totam quod quaerat possimus sint nobis quasi voluptates, ipsum quia minima officiis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium numquam voluptatem non expedita maiores magnam inventore minima nemo facilis perspiciatis explicabo accusamus quos, maxime quo repellat deleniti incidunt rem eos.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, eaque ducimus tempore rerum ut quasi corporis at! Pariatur, ad quasi alias ipsum sunt suscipit inventore explicabo laudantium necessitatibus. Ducimus, placeat?</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, iusto? Sint, fuga? Neque facilis tenetur, illo cumque nam sint sit ratione doloremque est, autem dignissimos! Eveniet reiciendis facere laudantium nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, distinctio aliquid quis commodi tempore ut ipsa. Ea impedit molestiae accusantium, explicabo veritatis obcaecati voluptates excepturi ipsum ipsa. Consequatur, ad dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis perferendis molestias ipsa atque quia ipsum distinctio ea iusto. Voluptates impedit magni voluptate non sunt, nihil exercitationem debitis quo voluptas obcaecati.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum, recusandae id similique et eveniet dolores mollitia quos. Ipsam in, magnam voluptatem voluptatum harum officia maiores dolore. Sunt, cumque esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda harum sint doloremque repudiandae cupiditate quibusdam totam exercitationem necessitatibus ut pariatur, error, possimus recusandae nostrum veniam nulla sequi voluptatum a quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit ex hic, tempore temporibus esse! Molestias veniam officia expedita eum odit. Sunt placeat mollitia esse? Ipsa eaque fugiat assumenda facere? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, sequi quisquam labore, quibusdam excepturi architecto ab repudiandae nihil enim necessitatibus quis nesciunt autem ipsum cum fuga. Laborum, ipsum. Ratione, vero.</p>
+        </article>
+    </main>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }
+            else {
+                itens.style.display = 'none'
+            }
+        }
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+               itens.style.display = 'none'
+            }
+            else {
+                itens.style.display ='block'
+                }
+        } 
+        
+    </script>
 </body>
 </html>
