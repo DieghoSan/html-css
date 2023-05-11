@@ -1,0 +1,31 @@
+#phone, #tablet, #pc, #tv, #print {
+    display: none;
+}
+#phone {
+    display: block;
+}
+html {
+    height: 100vh;
+}
+body {
+    background-image: url(../imagens/back-phone.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+main {
+    background-color: rgba(255, 255, 255, 0.764);
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.73);
+}
+h2 {
+    text-align: center;
+    padding-top: 30px;
+}
+img {
+    margin: auto;
+}
