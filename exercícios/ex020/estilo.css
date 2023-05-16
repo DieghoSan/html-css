@@ -1,0 +1,15 @@
+* {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+div {
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    border: solid 2px pink;
+}
+div:hover {
+    background-color: rgb(235, 158, 224);
+}

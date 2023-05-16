@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #263238;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .fundo {
+        max-width: 420px;
+        margin: 60px auto 100px auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        color: #4d4d4d;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: .5px .5px 20px .5px  #00000079;
+        }
+        .tudo {
+            width: 96%;
+            padding: 7px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+        .fundo > h3 {
+            margin: 10px 0px;
+            font-weight: bold;
+            color: rgb(3, 133, 255);
+        }
+        #botao {
+            display: flex;
+            justify-content: space-between;
+        }
+        main {
+            max-width: 700px;
+            margin: auto;
+        }
+        h1 {
+            margin: 50px;
+        }
+        .tudo:hover {
+            background-color: rgb(236, 236, 236);
+        }
+        input[type='submit'], input[type='reset'] {
+            color: rgb(3, 70, 255);
+            background: linear-gradient(to left, rgb(24, 96, 190), rgb(108, 189, 235), rgb(0, 140, 255));
+            width: 30%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-size: 200% 100%;
+            animation: botao 5s infinite alternate ;
+            font-weight: bold;
+            
+        }
+        @keyframes botao {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+            
+        }
+        input[type='submit']:hover, input[type='reset']:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Exemplo de formulário</h1>
+            <form action="home.html">
+                <div class="fundo">
+                    <h3>Dados Pessoais</h3>
+                        <label for="nome">Nome:</label>
+                        <input class="tudo" type="text" name="nome" id="nome" minlength="15" required>
+        
+                        <label for="e-mail">E-mail:</label>
+                        <input class="tudo" type="email" name="e-mail" id="e-mail" required>
+                        <label for="tel">Telefone:</label>
+                        <input class="tudo" type="tel" name="tel" id="tel" minlength="9" maxlength="9"  required>
+                        <label for="Estado">Estado</label>
+                        <p>
+                            <select name="Estado" id="Estado">
+                                <option value="" disabled selected>...</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                            </select>
+                        </p>
+                        <label for="Cor">Cor:</label>
+                        <input type="color" name="Cor" id="Cor">
+                        <p>
+                            <fieldset>
+                                <legend>Sexo</legend>
+                                <input type="radio" name="sexo" id="Feminino" required>
+                                <label for="Feminino">Feminino</label>
+                                <input type="radio" name="sexo" id="Masculino" required>
+                                <label for="Masculino">Masculino</label>
+                            </fieldset>
+                        </p>
+                        <p>
+                            <fieldset>
+                                <legend>Esportes</legend>
+                                <input type="checkbox" name="Basquete" id="Basquete">
+                                <label for="Basquete">Basquete</label>
+                                <input type="checkbox" name="Futebol" id="Futebol">
+                                <label for="Futebol">Futebol</label>
+                                <input type="checkbox" name="Natação" id="Natação">
+                                <label for="Natação">Natação</label>
+                                <input type="checkbox" name="Tênis" id="Tênis">
+                                <label for="Tênis">Tênis</label>
+                            </fieldset>
+                        </p>
+                        <p>
+                            <label for="Foto">Foto</label>
+                            <input type="file" name="Foto" id="Foto"><br>
+                        </p>
+                        <p>
+                            <label for="nivel">Nível de staifação:</label>
+                            <input type="range" name="num" id="num" min="0" max="10" value="5" oninput="nivel.innerHTML = Number(num.value)">
+                            <output id="nivel">5</output>
+                        </p>
+                        <div id="botao">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Limpar">
+                        </div>
+                </div class="fundo">
+            </form>
+    </main>
+</body>
+</html>
